@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int i,j,a[10],c;
+clrscr();
+cout<<"enter the elements;";
+for(i=0;i<10;i++)
+{
+cin>>a[i];
+}
+for(i=0;i<9;i+=2)
+{
+for(j=i+2;j<10;j=j+2)
+{
+if(a[i]<a[j])
+{
+c=a[i];
+a[i]=a[j];
+a[j]=c;
+}
+}
+}
+for(i=1;i<9;i+=2)
+{
+for(j=i+2;j<10;j+=2)
+{
+if(a[i]>a[j])
+{
+c=a[i];
+a[i]=a[j];
+a[j]=c;
+}
+}
+}
+for(i=0;i<10;i++)
+{
+cout<<a[i]<<"\t";
+}
+getch();
+}
